@@ -1,0 +1,96 @@
+<style>
+	form ul {
+		list-style-type:none;
+		margin-left:0px;
+		padding-left:0px;
+	}
+	
+	form ul > li {
+		margin-bottom:10px;
+	}
+</style>
+
+<div class="container">
+	
+	<h2>Angular Data Change / Comparison Demo</h2>
+		
+	<div class="row well">
+	  	<form name="projectForm" class="form-horizontal " role="form">
+	  		<div class="row">
+				<div class="col-sm-6">
+	  				<h3>Project Form</h3>
+				</div>
+				<div class="col-sm-6">
+					<ul class="breadcrumb pull-right">
+						<li crumb-link link-step="1" current-step="demoStep"></li>
+						<li crumb-link link-step="2" current-step="demoStep"></li>
+						<li crumb-link link-step="3" current-step="demoStep"></li>
+					</ul>
+				</div>
+			</div>
+	
+	  		<div class="form-group">
+	  			<label for="projectName" class="col-sm-3 control-label">Name:</label>
+	  			<div class="col-sm-4">
+		  			<input type="text" name="projectName" class="form-control" ng-model="project.projectName" /> 
+		  		</div>
+	  		</div>
+	  		<div class="form-group">
+	  			<label for="description" class="col-sm-3 control-label">Description:</label>
+	  			<div class="col-sm-4">
+		  			<input type="text" name="description" class="form-control" ng-model="project.description" /> 
+		  		</div>
+	  		</div>
+	  		<div class="form-group">
+                            <label for="hours" class="col-sm-3 control-label">Estimated Hours:</label>
+                            <div class="col-sm-1">
+                                <input type="text" name="hours" class="form-control" ng-model="project.hours" /> 
+                            </div>
+	  		</div>{{project.hours}}
+	  		<div class="form-group">
+	  			<label for="meetingNotes" class="col-sm-3 control-label">Meeting Notes:</label>
+	  			<div class="col-sm-6">
+		  			<textarea name="meetingNotes" class="form-control" ng-model="project.meetingNotes"></textarea> 
+		  		</div>
+	  		</div>
+	  		<div class="form-group">
+	  			<label for="tasks" class="col-sm-3 control-label">Tasks By Priority:<br />(drag to reorder)</label>
+	  			
+		  			<ul class="col-sm-8" ui-sortable="sortableOptions" ng-model="project.tasks">
+		  				<li ng-repeat="task in project.tasks" ng-form="taskForm" style="">
+		  					<div class="input-group">
+		  						<span class="input-group-addon glyphicon glyphicon-move"> {{task.rank}}</span>
+		  						<input type="text" class="form-control" name="desc" ng-model="task.description" width="90%"/>	
+		  					</div>
+		  				</li>
+		  			</ul>
+		  			
+	  		</div>
+	  	</form>
+	</div>
+  	
+  	<div ng-switch="demoStep">
+  		<div ng-switch-when="1">
+  			<div class="row well">
+  				<div class="col-sm-4">
+		  			Current state of $scope.projectForm.$dirty:
+		  		</div>
+		  		<div class="col-sm-2">
+		  			<strong>{{projectForm.$dirty}}</strong>
+		  		</div>
+  			</div>
+  		</div>
+  		<div ng-switch-when="2">
+  			<div ng-include="'views/dataState.html'"></div>
+  		</div>
+  		<div ng-switch-when="3">
+  			<div ng-include="'views/dataState.html'"></div>
+  		</div>
+  		
+  	</div>
+  	
+  	
+</div>
+
+
+ 	

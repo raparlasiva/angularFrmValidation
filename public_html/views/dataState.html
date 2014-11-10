@@ -1,0 +1,85 @@
+<div class="row well">
+	<div class="col-sm-12">
+		<div class="col-sm-4">
+  			Initial result of angular.equals(project, original):
+  		</div>
+  		<div class="col-sm-2">
+  			<strong>{{initialComparison}}</strong>
+  		</div>
+	</div>
+	
+	<div class="col-sm-12">
+		<div class="col-sm-4">
+  			Current result of angular.equals(project, original):
+  		</div>
+  		<div class="col-sm-2">
+  			<strong>{{dataHasChanged}}</strong>
+  		</div>
+	</div>
+	
+	<div class="col-sm-12">
+		<div class="col-sm-4">
+  			Current state of $scope.projectForm.$dirty:
+  		</div>
+  		<div class="col-sm-2">
+  			<strong>{{projectForm.$dirty}}</strong>
+  		</div>
+	</div>
+	
+	<div class="col-sm-12">
+  		<div class="col-sm-6">
+  			<h3>Original data state</h3>
+  			<div class="row">
+  				<div class="col-sm-6">
+  					Hours + 1:
+  				</div>
+  				<div class="col-sm-6">
+  					{{original.hours+1}}
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-sm-6">
+  					Is Meeting Notes null?
+  				</div>
+  				<div class="col-sm-6">
+  					{{original.meetingNotes== null}}
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-sm-6">
+  					Is Meeting Notes an empty string?
+  				</div>
+  				<div class="col-sm-6">
+  					{{original.meetingNotes== ""}}
+  				</div>
+  			</div>
+  		</div>
+  		<div class="col-sm-6">
+  			<h3>Project data state</h3>
+  			<div class="row">
+  				<div class="col-sm-6">
+  					Hours + 1:
+  				</div>
+  				<div class="col-sm-6">
+  					{{project.hours+1}}
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-sm-6">
+  					Is Meeting Notes null?
+  				</div>
+  				<div class="col-sm-6">
+  					{{project.meetingNotes== null}}
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-sm-6">
+  					Is Meeting Notes an empty string?
+  				</div>
+  				<div class="col-sm-6">
+  					{{project.meetingNotes== ""}}
+  				</div>
+  			</div>
+  		</div>
+	</div>
+</div>

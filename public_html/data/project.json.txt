@@ -1,0 +1,29 @@
+{
+    "projectName": "Create Customer Web Signup Form",
+    "description": "Need a new sign up form to make customer account creation easier on a mobile device.",
+    "hours": 40,
+    "meetingNotes": null,
+    "tasks":  [
+    	{
+    		"rank": 1,
+    		"description":  "Determine what data needs collecting"
+    	},
+    	{
+    		"rank": 2,
+    		"description":  "Set validation rules"
+    	},
+    	{
+    		"rank": 3,
+    		"description": "Determine page layout"
+    	},
+    	{
+    		"rank": 4,
+    		"description": "Design data model"
+    	},
+    	{
+    		"rank": 5,
+    		"description": "Create REST endpoints"
+    	}
+    
+    ]
+}
